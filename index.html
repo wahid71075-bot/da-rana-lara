@@ -4,93 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>د رڼا لاره - علمي او اسلامي خپرونې</title>
+    <!-- د ګوګل ښکلي اسلامي او پښتو فونټونه -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
+            font-family: 'Amiri', 'Lateef', Tahoma, sans-serif;
+            background-color: #f0f4f1;
+            color: #2b2b2b;
             margin: 0;
             padding: 0;
+            font-size: 1.15rem;
+            line-height: 1.8;
         }
         header {
-            background-color: #1b4d3e;
-            color: white;
-            padding: 20px;
+            background: linear-gradient(135deg, #134633 0%, #1b5e46 100%);
+            color: #f7fcf9;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.3rem;
+            opacity: 0.9;
         }
         nav {
-            background-color: #2c6b56;
+            background-color: #1b5e46;
             display: flex;
             justify-content: center;
-            padding: 10px;
+            flex-wrap: wrap;
+            padding: 5px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav a {
-            color: white;
+            color: #e8f5e9;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 5px;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 8px;
             font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
-        nav a:hover {
-            background-color: #1b4d3e;
+        nav a:hover, nav a.active {
+            background-color: #0f3d2e;
+            color: #fff;
         }
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
         .welcome-box {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             text-align: center;
-            margin-bottom: 30px;
-            border-top: 5px solid #1b4d3e;
+            margin-bottom: 35px;
+            border-top: 6px solid #1b5e46;
+        }
+        .welcome-box h2 {
+            color: #134633;
+            margin-top: 0;
+            font-size: 2rem;
+        }
+        .main-article {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            margin-bottom: 35px;
+            border-right: 6px solid #c9a054; /* یو ښکلی طلايي رنګ د مذهب برخې لپاره */
+        }
+        .main-article h2 {
+            color: #134633;
+            margin-top: 0;
+            border-bottom: 2px solid #f0f4f1;
+            padding-bottom: 15px;
+            font-size: 2.2rem;
+        }
+        .main-article h3 {
+            color: #1b5e46;
+            font-size: 1.5rem;
+            margin-top: 25px;
+        }
+        blockquote {
+            background-color: #f7fbf8;
+            border-right: 4px solid #1b5e46;
+            margin: 20px 0;
+            padding: 15px 25px;
+            font-style: italic;
+            border-radius: 4px;
         }
         .main-sections {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 40px;
         }
-        @media (min-width: 600px) {
-            .main-sections { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (min-width: 900px) {
+        @media (min-width: 650px) {
             .main-sections { grid-template-columns: repeat(3, 1fr); }
         }
         .card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-right: 5px solid #2c6b56;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-bottom: 4px solid #1b5e46;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card h3 {
-            color: #1b4d3e;
+            color: #134633;
             margin-top: 0;
+            font-size: 1.4rem;
         }
-        .card-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background-color: #1b4d3e;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-        .card-btn:hover {
-            background-color: #2c6b56;
+        .card p {
+            font-size: 1rem;
+            color: #555;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #1b4d3e;
-            color: white;
-            margin-top: 40px;
+            padding: 25px;
+            background-color: #134633;
+            color: #e8f5e9;
+            margin-top: 60px;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -102,35 +156,60 @@
     </header>
 
     <nav>
-        <a href="#">اصلي پاڼه</a>
+        <a href="#" class="active">اصلي پاڼه</a>
         <a href="#">ښایسته خبرې</a>
         <a href="#">د مسایلو حل</a>
         <a href="#">د افکارو سمون</a>
     </nav>
 
     <div class="container">
+        <!-- د ښه راغلاست بکس -->
         <div class="welcome-box">
             <h2>سلامونه او نېکې هیلې!</h2>
             <p>دې علمي پلېټفارم ته ښه راغلاست. دلته موږ هڅه کوو چې د اسلام مبین دین په خپله اصلي او زړه راښکونکې بڼه معرفي کړو، د تعصباتو مخه ونیسو او د بې‌بنسټه خرافاتو په علمي رد سره ټولنې ته رڼا ورسوو.</p>
         </div>
 
+        <!-- د فقهي اختلاف غټ مضمون -->
+        <div class="main-article">
+            <h2>⚖️ فقهي اختلافات؛ د رحمت لاره که د تعصب لامل؟</h2>
+            <p>کله چې موږ د اسلامي تاریخ پاڼې اړوو، د فقهې د څلورو مشهورو امامانو نومونه په ډېر درناوي اخلو. هغوی د خپل وخت ستر عالمان وو چې خپل ټول ژوند یې د قران کریم او نبوي احادیثو په رڼا کې د خلکو د دیني مسایلو د حل لپاره وقف کړی و.</p>
+            
+            <p>مګر نن ورځ په ټولنه کې یوه لویه پوښتنه پیدا شوې ده: <strong>اگر دا امامان معصوم نه وو او په اجتهاد کې د هغوی څخه هم خطا کېدلای شوه، نو بیا ولې زموږ په ټولنه کې د یو مشخص امام پر خبره داسې ړوند تعصب کېږي چې د بل امام د سمې خبرې منونکي ته بدرد یا پېغور ورکول کېږي؟</strong></p>
+
+            <h3>۱. امامان بشر وو، نه معصوم ملایکې</h3>
+            <p>په اسلام کې یوازې انبیاء علیهم السلام له خطاوو څخه معصوم دي. څلور واړه امامان پخپله په دې بېخې متفق وو چې د دوی رایې او اجتهادات د خطا او سموالي دواړه احتمالات لري. د رسول الله ﷺ مشهور حدیث دی چې فرمایي:</p>
+            <blockquote>
+                "کله چې مجتهد اجتهاد وکړي او حق ته ورسېږي، دوه اجره لري او که اجتهاد وکړي او خطا شي، یو اجر لري." (صحیح البخاري)
+            </blockquote>
+
+            <h3>۲. پخپله د امامانو وصیت څه و؟</h3>
+            <p>تر ټولو لویه تېروتنه دا ده چې د نن ورځې متعصب ملایان مذهب داسې معرفي کوي لکه یو جلا او نوی دین چې وي. په داسې حال کې چې پخپله امامانو د تعصب سخت رد کړی دی:</p>
+            <ul>
+                <li><strong>امام ابوحنیفه (رح) فرمایلي:</strong> "دا روا نه ده چې څوک زما په رایه فتوا ورکړي، ترڅو پوه نشي چې ما دا دلیل له کومه کړی."</li>
+                <li><strong>امام شافعي (رح) فرمایلي:</strong> "زما رایه سمه ده خو د خطا احتمال پکې شته، او د بل رایه خطا ده خو د سموالي احتمال پکې شته."</li>
+            </ul>
+
+            <h3>۳. د ملایانو د تعصب او خرافاتو رد</h3>
+            <p>اصلي ستونزه د امامانو په علم کې نه ده، بلکې د هغو کم‌علمه او متعصبو ملایانو په ذهنیت کې ده چې دین یې د خپل منبر او دکان د تودولو لپاره د انحصار وسیله ګرځولې ده. کله چې یو مسلمان په یوه مسئله کې د بل امام رایه چې قوي او صریح حدیث ورته موجود وي، غوره ګڼي او عمل پرې کوي، هغه په حقیقت کې د رسول الله ﷺ د سنتو پیروي کړې ده. چا ته چې د دې کار له امله بد ویل کېږي، دا پخپله د مقابل لوري د جهالت نښه ده.</p>
+
+            <p><strong>پايله:</strong> مذهبونه د دې لپاره وو چې زموږ لپاره د دین فهم اسانه کړي، نه دا چې د مسلمانانو ترمنځ د تفرقې او کرکې دیوالونه جوړ کړي. اسلام تر هر مذهب پراخ دی او زموږ اصل هدف باید د حق پیروي وي.</p>
+        </div>
+
+        <!-- لاندیني کوچني کارتونه -->
         <div class="main-sections">
             <div class="card">
                 <h3>✨ ښایسته اسلامي خبرې</h3>
-                <p>د ژوند د جوړولو، اخلاقو، روحي ارامۍ او انساني کرامت په اړه د قرانکریم د لارښوونو او نبوي احادیثو رڼا.</p>
-                <a href="#" class="card-btn">مطالعه کول</a>
+                <p>د ژوند د جوړولو، اخلاقو او انساني کرامت په اړه د قران او سنتو لارښوونې.</p>
             </div>
 
             <div class="card">
-                <h3>⚖️ اختلافي مسایل په ښه انداز کې</h3>
-                <p>د فقهي او فکري اختلافاتو څېړنه په پوره علمي امانتدارۍ او ادب سره، لرې له هر ډول تکفیر او توندلارۍ څخه.</p>
-                <a href="#" class="card-btn">مطالعه کول</a>
+                <h3>⚖️ د مسایلو علمي حل</h3>
+                <p>د فقهي او فکري اختلافاتو څېړنه په پوره علمي امانتدارۍ او ادب سره.</p>
             </div>
 
             <div class="card">
-                <h3>🛡️ د غلطو تعبیرونو او خرافاتو رد</h3>
-                <p>د ځینو کسانو د بې‌سنده او سختدریځو خبرو مستند او علمي ځوابونه، ترڅو د خلکو ذهنونه له انحراف څخه وساتل شي.</p>
-                <a href="#" class="card-btn">مطالعه کول</a>
+                <h3>🛡️ د خرافاتو رد</h3>
+                <p>د بې‌سنده او سختدریځو خبرو مستند او علمي ځوابونه.</p>
             </div>
         </div>
     </div>
