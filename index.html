@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د رڼا لاره - علمي او اسلامي خپرونې</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1b4d3e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #2c6b56;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #1b4d3e;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .welcome-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 30px;
+            border-top: 5px solid #1b4d3e;
+        }
+        .main-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+            gap: 20px;
+        }
+        @media (min-width: 600px) {
+            .main-sections { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .main-sections { grid-template-columns: repeat(3, 1fr); }
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-right: 5px solid #2c6b56;
+        }
+        .card h3 {
+            color: #1b4d3e;
+            margin-top: 0;
+        }
+        .card-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #1b4d3e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .card-btn:hover {
+            background-color: #2c6b56;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1b4d3e;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>د رڼا لاره</h1>
+        <p>د رښتیني اسلام، منځلاريتوب او علمي څېړنو خپروندویه پاڼه</p>
+    </header>
+
+    <nav>
+        <a href="#">اصلي پاڼه</a>
+        <a href="#">ښایسته خبرې</a>
+        <a href="#">د مسایلو حل</a>
+        <a href="#">د افکارو سمون</a>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-box">
+            <h2>سلامونه او نېکې هیلې!</h2>
+            <p>دې علمي پلېټفارم ته ښه راغلاست. دلته موږ هڅه کوو چې د اسلام مبین دین په خپله اصلي او زړه راښکونکې بڼه معرفي کړو، د تعصباتو مخه ونیسو او د بې‌بنسټه خرافاتو په علمي رد سره ټولنې ته رڼا ورسوو.</p>
+        </div>
+
+        <div class="main-sections">
+            <div class="card">
+                <h3>✨ ښایسته اسلامي خبرې</h3>
+                <p>د ژوند د جوړولو، اخلاقو، روحي ارامۍ او انساني کرامت په اړه د قرانکریم د لارښوونو او نبوي احادیثو رڼا.</p>
+                <a href="#" class="card-btn">مطالعه کول</a>
+            </div>
+
+            <div class="card">
+                <h3>⚖️ اختلافي مسایل په ښه انداز کې</h3>
+                <p>د فقهي او فکري اختلافاتو څېړنه په پوره علمي امانتدارۍ او ادب سره، لرې له هر ډول تکفیر او توندلارۍ څخه.</p>
+                <a href="#" class="card-btn">مطالعه کول</a>
+            </div>
+
+            <div class="card">
+                <h3>🛡️ د غلطو تعبیرونو او خرافاتو رد</h3>
+                <p>د ځینو کسانو د بې‌سنده او سختدریځو خبرو مستند او علمي ځوابونه، ترڅو د خلکو ذهنونه له انحراف څخه وساتل شي.</p>
+                <a href="#" class="card-btn">مطالعه کول</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© ۲۰۲۶ د رڼا لاره ویبسایټ. ټول حقونه خوندي دي.</p>
+    </footer>
+
+</body>
+</html>
